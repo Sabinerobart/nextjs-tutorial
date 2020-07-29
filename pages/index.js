@@ -4,6 +4,8 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import { getSortedPostsData } from '../lib/posts'
 
+import Date from '../components/date'
+
 /**
  * getStaticProps for static generation (the page doesn't change on every request)
  */
@@ -39,7 +41,7 @@ export default function Home({ allPostsData }) {
         <p>
           I am currently learning Next.js through their blog-like {' '}
           <a href="https://nextjs.org/learn">tutorial</a>.
-    </p>
+        </p>
 
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -47,11 +49,13 @@ export default function Home({ allPostsData }) {
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              {title}
+              <Link href="/posts/[id]" as={`/posts/${id}`}>
+                <a>{title}</a>
+              </Link>
               <br />
-              {id}
-              <br />
-              {date}
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
             </li>
           ))}
         </ul>

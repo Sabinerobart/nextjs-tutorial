@@ -10,6 +10,15 @@
   align-items: center;
 }
 
+.headerLayout {
+  display: flex;
+  align-items: flex-end;
+}
+
+.headerLink {
+  border-bottom: 1px solid transparent !important;
+}
+
 .headerImage {
   width: 6rem;
   height: 6rem;
