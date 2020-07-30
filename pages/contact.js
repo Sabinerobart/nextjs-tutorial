@@ -5,6 +5,7 @@ const Contact = () => {
     <Layout contact>
       <form name="contact" method="post" data-netlify="true" action="/success">
         <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="subject" value="[Zb] Contact reply" />
         <p>
           <label>Your Name: <input type="text" name="name" /></label>
         </p>
@@ -14,6 +15,7 @@ const Contact = () => {
         <p>
           <label>Message: <textarea name="message"></textarea></label>
         </p>
+        <p><label>File :<input type="file" name="file" /></label></p>
         <p>
           <button type="submit">Send</button>
         </p>
