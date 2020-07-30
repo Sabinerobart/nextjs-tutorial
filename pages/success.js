@@ -1,3 +1,9 @@
+import AllCentered from '../components/allCentered/allCentered'
+
 export default function Success() {
-  return <div>Form successfully submitted!</div>
+  return (
+    <AllCentered>
+      Form successfully submitted!
+    </AllCentered>
+  )
 }
