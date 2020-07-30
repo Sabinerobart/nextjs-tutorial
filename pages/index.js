@@ -42,8 +42,8 @@ export default function Home({ allPostsData }) {
           I am currently learning Next.js through their blog-like {' '}
           <a href="https://nextjs.org/learn">tutorial</a>.
         </p>
-
       </section>
+
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
