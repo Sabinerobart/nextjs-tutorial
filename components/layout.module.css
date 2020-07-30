@@ -15,17 +15,15 @@
   align-items: flex-end;
 }
 
-.headerLink {
-  border-bottom: 1px solid transparent !important;
+.headerLink::after {
+  background: none;
 }
 
 .headerImage {
-  width: 6rem;
   height: 6rem;
 }
 
 .headerHomeImage {
-  width: 8rem;
   height: 8rem;
 }
 

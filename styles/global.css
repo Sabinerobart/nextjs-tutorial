@@ -18,11 +18,24 @@ a {
   position: relative;
   padding: 0 3px;
   transition: .2s;
-  border-bottom: 1px solid #a3a3a3ee;
+  display: inline-block;
 }
 
-a:hover {
+a::after {
   background: #a3a3a383;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  content: "";
+  z-index: -1;
+  transition: .2s;
+}
+
+a:hover::after {
+  top: 0;
+  height: 100%;
 }
 
 img {
